@@ -1,0 +1,83 @@
+════════════════════════════════════════════════════════════
+    STUDY TIMER - APK BANANE KE STEPS (HINDI)
+════════════════════════════════════════════════════════════
+
+APP KI KHASIYAT:
+✅ Bilkul offline kaam karta hai — internet ki zarurat nahi
+✅ Recent apps clear karne ke baad bhi chalta rahega
+✅ Screen ON rahegi (battery bachane ke liye sirf ghante wala 
+   kaam karta hai — koi video/animation nahi)
+✅ Notification bar mein timer dikhega hamesha
+✅ Date-wise record save hota hai (DELETE NAHI HOGA)
+✅ Pure black (AMOLED) screen — battery maximum bachegi
+
+════════════════════════════════════════════════════════════
+APK BANANE KA TARIKA (Dost/Cybercafe se karwa lo):
+════════════════════════════════════════════════════════════
+
+STEP 1: Android Studio download karo
+  → https://developer.android.com/studio
+
+STEP 2: Is folder ko kisi bhi jagah copy karo (StudyTimer/)
+
+STEP 3: Android Studio open karo
+  → File → Open → StudyTimer folder select karo
+
+STEP 4: Thodi der ruko (Gradle sync hoga — internet chahiye sirf 
+        ek baar build ke liye)
+
+STEP 5: Build → Build Bundle(s) / APK(s) → Build APK(s)
+
+STEP 6: APK mil jayegi:
+  StudyTimer/app/build/outputs/apk/debug/app-debug.apk
+
+STEP 7: Ye APK apne tablet mein copy karo aur install karo
+  (Settings → Security → Unknown Sources → ON karna padega)
+
+════════════════════════════════════════════════════════════
+APP USE KARNE KA TARIKA:
+════════════════════════════════════════════════════════════
+
+1. "SHURU KARO" — Timer start hoga
+2. Padhai karte raho — timer chalta rahega notification mein bhi
+3. Break ke waqt — "BAND KARO" → phir "SAVE KARO"
+   (Ye aaj ki padhai database mein save ho jaegi)
+4. Agar galti se reset karna ho — "RESET" button
+   (Ye save nahi karega, sirf timer zero karega)
+5. "PADHAI KA RECORD DEKHO" — sab dates ki padhai dikhegi
+   (Delete ka koi button nahi — permanent record)
+
+════════════════════════════════════════════════════════════
+FILES KI JANKARI:
+════════════════════════════════════════════════════════════
+
+app/src/main/java/com/studytimer/
+├── MainActivity.java      → Main UI screen
+├── TimerService.java      → Background service (timer chalta hai)
+└── DatabaseHelper.java    → Date-wise SQLite database
+
+app/src/main/res/
+├── layout/activity_main.xml → Screen ka design
+└── values/styles.xml         → Colors/theme
+
+app/src/main/AndroidManifest.xml → App permissions
+
+════════════════════════════════════════════════════════════
+IMPORTANT NOTES:
+════════════════════════════════════════════════════════════
+
+• TimerService.java mein START_STICKY likha hai — matlab Android
+  agar service band kare to khud restart kar leta hai
+
+• WakeLock liya hai — timer ka counting band nahi hogi
+  jab screen off ho
+
+• SQLite database phone ki internal memory mein save hota hai
+  — internet bilkul nahi chahiye
+
+• Notification bar mein timer dikhega — app ke bahar
+  bhi time pata rahega
+
+════════════════════════════════════════════════════════════
+Banaya: Claude (Anthropic) — Aapke liye specifically
+════════════════════════════════════════════════════════════

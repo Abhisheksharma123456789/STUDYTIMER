@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- TIMER SCREEN -->
+    <LinearLayout
+        android:id="@+id/layoutTimer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="#000000">
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tvCurrentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏹ RUKA HUA"
+            android:textSize="16sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Timer Display -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="80sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="70sp"
+                android:textColor="#F59E0B"
+                android:paddingHorizontal="4dp"/>
+
+            <TextView
+                android:id="@+id/tvMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="80sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="70sp"
+                android:textColor="#F59E0B"
+                android:paddingHorizontal="4dp"/>
+
+            <TextView
+                android:id="@+id/tvSeconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="80sp"
+                android:textColor="#CCCCCC"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Labels -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center"
+                android:text="Ghante" android:textColor="#666666" android:textSize="12sp"/>
+            <TextView android:layout_width="24dp" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center"
+                android:text="Minute" android:textColor="#666666" android:textSize="12sp"/>
+            <TextView android:layout_width="24dp" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center"
+                android:text="Second" android:textColor="#666666" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Aaj ki total -->
+        <TextView
+            android:id="@+id/tvTodayTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aaj: 0h 0m padha"
+            android:textSize="16sp"
+            android:textColor="#F59E0B"
+            android:layout_marginBottom="40dp"/>
+
+        <!-- Main Button: Start/Pause -->
+        <Button
+            android:id="@+id/btnStartPause"
+            android:layout_width="280dp"
+            android:layout_height="70dp"
+            android:text="▶  SHURU KARO"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1B5E20"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:text="💾  SAVE KARO (Aaj ki padhai)"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1565C0"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="🔄  RESET (Save nahi hoga)"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#37474F"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Records Button -->
+        <Button
+            android:id="@+id/btnShowRecords"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="📊  PADHAI KA RECORD DEKHO"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4A148C"/>
+
+    </LinearLayout>
+
+    <!-- RECORDS SCREEN -->
+    <LinearLayout
+        android:id="@+id/layoutRecords"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Padhai Ka Record"
+            android:textSize="22sp"
+            android:textColor="#F59E0B"
+            android:textStyle="bold"
+            android:padding="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(Yahan se delete nahi hoga — permanent record)"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="12dp"/>
+
+        <ListView
+            android:id="@+id/lvRecords"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#222222"
+            android:dividerHeight="1dp"/>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="← Wapas Jao"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B71C1C"
+            android:layout_margin="16dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>
